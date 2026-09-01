@@ -1,0 +1,17 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+main {
+  padding: 20px;
+  color: #e60202
+}
+h1, h2, h3 {
+  color: grey;
+}
+.h2 {
+  color: #e60202;
+}
+.heading {
+  color: green;
+}
