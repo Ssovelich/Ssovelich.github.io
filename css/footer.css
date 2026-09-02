@@ -11,4 +11,7 @@ footer {
   a {
     color: #fff;
   }
+  .copy {
+    text-align: center;
+  }
 }
