@@ -16,16 +16,18 @@ body {
 }
 main {
   padding: 20px;
-  color: #e60202
+  color: #e60202;
 }
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   color: grey;
   font-weight: 700;
 }
 h1 {
   font-size: 1.45rem;
 }
-h2{
+h2 {
   font-size: 1.3rem;
 }
 .h2 {
@@ -82,7 +84,7 @@ strong {
   );
 }
 .radial {
-  background: 
+  background:
     radial-gradient(ellipse at top, orange, transparent),
     radial-gradient(ellipse at bottom, red, transparent);
 }
