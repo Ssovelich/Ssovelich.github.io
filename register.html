@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <title>Adrenaline | Registration</title>
+  </head>
+  <body>
+    <main class="register-page">
+      <div class="register-card">
+        <h1 class="register-title">Registration</h1>
+
+        <form
+          action="/register"
+          method="POST"
+          id="registerForm"
+          class="register-form"
+        >
+          <div class="form-group">
+            <label for="last-name">Last Name</label>
+            <input
+              type="text"
+              id="last-name"
+              name="last_name"
+              placeholder="Smith"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="first-name">First Name</label>
+            <input
+              type="text"
+              id="first-name"
+              name="first_name"
+              placeholder="Alex"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="example@gmail.com"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              placeholder="(099) 999 99 99"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="••••••••"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="confirm-password">Confirm Password</label>
+            <input
+              type="password"
+              id="confirm-password"
+              name="confirm_password"
+              placeholder="••••••••"
+              required
+            />
+          </div>
+
+          <div class="form-group gender-group">
+            <span class="gender-title">Gender:</span>
+            <label class="radio-label">
+              <input type="radio" name="gender" value="female" required />
+              Female
+            </label>
+            <label class="radio-label">
+              <input type="radio" name="gender" value="male" required /> Male
+            </label>
+          </div>
+
+          <button type="submit" class="submit-btn">Sign Up</button>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>

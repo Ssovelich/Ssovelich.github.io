@@ -1,5 +1,5 @@
 footer {
-  background-color: #333;
+  background: var(--bgColor);
   color: #fff;
   padding: 10px;
 
@@ -14,4 +14,55 @@ footer {
   .copy {
     text-align: center;
   }
+}
+
+.footer-links {
+  text-align: center;
+}
+
+.footer-links-item {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 40px;
+  text-align: left;
+}
+
+.footer-links-item ul {
+  padding: 0;
+}
+
+.footer-links-item a {
+  text-decoration: none;
+}
+
+.footer-links-item a:hover {
+  text-decoration: underline;
+}
+
+.footer-legal {
+  text-align: center;
+  margin: 15px 0;
+}
+
+.footer-legal a {
+  text-decoration: none;
+}
+
+.footer-legal a:hover {
+  text-decoration: underline;
+}
+
+.footer-social-list {
+  text-align: center;
+}
+.footer-social-list-item {
+  display: inline-block;
+  margin-right: 10px;
+}
+.footer-social-list-item a {
+  text-decoration: none;
+}
+
+.footer-social-list-item a:hover {
+  transform: scale(1.2);
 }
