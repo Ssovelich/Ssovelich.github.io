@@ -17,22 +17,25 @@ footer {
 }
 
 .footer-links {
-  text-align: center;
-}
-
-.footer-links-item {
-  display: inline-block;
-  vertical-align: top;
-  margin: 0 40px;
-  text-align: left;
+  display: flex;
+  justify-content: center;
+  gap: 100px;
 }
 
 .footer-links-item ul {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
   padding: 0;
+}
+
+.footer-links-item li {
+  list-style-type: none;
 }
 
 .footer-links-item a {
   text-decoration: none;
+  padding: 5px 0;
 }
 
 .footer-links-item a:hover {
@@ -53,14 +56,14 @@ footer {
 }
 
 .footer-social-list {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
 }
-.footer-social-list-item {
-  display: inline-block;
-  margin-right: 10px;
-}
+
 .footer-social-list-item a {
   text-decoration: none;
+  transition: transform 0.3s ease;
 }
 
 .footer-social-list-item a:hover {

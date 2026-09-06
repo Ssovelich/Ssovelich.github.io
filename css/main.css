@@ -20,10 +20,13 @@ body {
   background-color:var(--bgColorMain);
   color: var(--textColorMain);
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 main {
   padding: 20px;
-  min-height: calc(100vh - 452px);
+  flex: 1;
 }
 h1,
 h2,

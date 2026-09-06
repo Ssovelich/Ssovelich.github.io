@@ -2,17 +2,19 @@
   min-height: 100vh;
   background: var(--bgColor);
   padding: 8px;
-  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .register-card {
   width: 100%;
   max-width: 520px;
-  margin: 0 auto;
   background: var(--textColorMain);
   padding: 16px;
   border-radius: 8px;
-  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
 }
 
 .register-title {
@@ -24,13 +26,19 @@
   font-weight: 700;
 }
 
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
 .form-group {
-  margin-bottom: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 }
 
 .form-group label {
-  display: block;
-  margin-bottom: 4px;
   font-size: 0.9rem;
   font-weight: 500;
   color: var(--textColor);
@@ -51,21 +59,26 @@
 }
 
 .gender-group {
-  margin-top: 10px;
-  margin-bottom: 25px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+  margin-top: 6px;
+  margin-bottom: 12px;
 }
 .gender-title {
-  display: inline-block;
+  /* display: inline-block;
   margin-right: 12px;
-  margin-bottom: 4px;
-  font-size: 0.9rem;
+  margin-bottom: 4px; */
+  font-size: 1rem;
   font-weight: 500;
   color: var(--textColor);
 }
 
 .radio-label {
-  display: inline-block;
-  margin-right: 20px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
   font-size: 0.95rem;
   cursor: pointer;
   color: var(--textColor);
@@ -73,8 +86,7 @@
 
 .form-group input[type="radio"] {
   width: auto;
-  display: inline-block;
-  margin: 0 6px 0 0;
+  margin: 0;
   cursor: pointer;
 }
 
@@ -88,6 +100,7 @@
   font-size: 1rem;
   font-weight: 500;
   cursor: pointer;
+  transition: background 0.3s ease;
 }
 
 .submit-btn:hover {
