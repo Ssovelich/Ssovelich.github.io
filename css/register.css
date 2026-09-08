@@ -1,6 +1,6 @@
 .register-page {
   min-height: 100vh;
-  background: var(--bgColor);
+  background: var(--bgColor-footer);
   padding: 8px;
   display: flex;
   justify-content: center;
@@ -67,9 +67,6 @@
   margin-bottom: 12px;
 }
 .gender-title {
-  /* display: inline-block;
-  margin-right: 12px;
-  margin-bottom: 4px; */
   font-size: 1rem;
   font-weight: 500;
   color: var(--textColor);

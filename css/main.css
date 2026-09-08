@@ -4,8 +4,9 @@ html {
   font-size: 100%;
 }
 :root {
-  --bgColorMain: black;
+  --bgColorMain: #1a1c20;
   --bgColor: linear-gradient(to bottom, #950101 0%, #630102 50%, #3d0302 100%);
+  --bgColor1: linear-gradient(to bottom, #3d0302 0%, #630102 50%, #950101 100%);
   --textColorMain: #fff;
   --textColor: #333;
 }
@@ -17,7 +18,7 @@ body {
   font-style: normal;
   font-variation-settings: "wdth" 100;
   font-size: 1rem;
-  background-color:var(--bgColorMain);
+  background-color: var(--bgColorMain);
   color: var(--textColorMain);
   margin: 0;
   display: flex;

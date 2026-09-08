@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: #000;
+  background: #fff;
+  font-family: Arial, sans-serif;
+  padding: 1em;
+  font-size: clamp(16px, calc(9.333px + 1.389vw), 48px);
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+
+.header,
+.sidebar,
+.main,
+.footer {
+  width: 100%;
+}
+
+@media (min-width: 786px) {
+  .sidebar {
+    width: 250px;
+  }
+
+  .main {
+    flex: 1;
+    min-width: 0;
+  }
+}

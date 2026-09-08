@@ -1,11 +1,13 @@
 footer {
-  background: var(--bgColor);
+  background: var(--bgColor1);
   color: #fff;
   padding: 10px;
 
   ul {
     color: #fff;
     list-style-type: none;
+    padding: 0;
+    margin: 0;
   }
 
   a {
@@ -20,13 +22,16 @@ footer {
   display: flex;
   justify-content: center;
   gap: 100px;
+  h2 {
+    font-size: 1.2rem;
+    margin: 0 0 10px;
+  }
 }
 
 .footer-links-item ul {
   display: flex;
   flex-direction: column;
-  gap: 5px;
-  padding: 0;
+  gap: 6px;
 }
 
 .footer-links-item li {
@@ -35,7 +40,6 @@ footer {
 
 .footer-links-item a {
   text-decoration: none;
-  padding: 5px 0;
 }
 
 .footer-links-item a:hover {
@@ -44,7 +48,16 @@ footer {
 
 .footer-legal {
   text-align: center;
-  margin: 15px 0;
+  margin-bottom: 16px;
+}
+
+.footer-legal ul {
+  padding: 0;
+}
+
+.footer-legal li {
+  display: inline;
+  margin: 0 10px;
 }
 
 .footer-legal a {
@@ -59,6 +72,7 @@ footer {
   display: flex;
   justify-content: center;
   gap: 10px;
+  padding: 0;
 }
 
 .footer-social-list-item a {
