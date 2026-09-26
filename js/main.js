@@ -1,44 +1,93 @@
 "use strict";
 
-const classes = ["first", "second", "third", "fourth"];
+const alertBox = document.querySelector(".alert");
 
 //** task 1 */
-const p1 = document.querySelector("#p1");
-p1.style.backgroundColor = "gold";
+const btnPrimary = document.querySelector(".btn-primary");
+btnPrimary.onclick = function () {
+  alertBox.className = "alert mt-5 alert-primary";
+  alertBox.textContent = "A simple primary alert—check it out!";
+};
 
 //** task 2 */
-const p2 = document.querySelector("#p2");
-p2.style.backgroundColor = "gold";
-p2.style.color = "blue";
-p2.style.fontSize = "2rem";
+const btnSecondary = document.querySelector(".btn-secondary");
+btnSecondary.addEventListener("click", () => {
+  alertBox.className = "alert mt-5 alert-primary";
+  alertBox.textContent = "A simple secondary alert—check it out!";
+});
 
 //** task 3 */
-const p3 = document.querySelector("#p3");
-p3.classList.add("third");
+const btnSuccess = document.querySelector(".btn-success");
+
+btnSuccess.addEventListener("mouseover", () => {
+  alertBox.classList.add("alert-success");
+  alertBox.textContent = "A simple success alert—check it out!";
+});
+
+btnSuccess.addEventListener("mouseout", () => {
+  alertBox.classList.remove("alert-success");
+  alertBox.textContent = "";
+});
 
 //** task 4 */
-const p4 = document.querySelector("#p4");
-p4.classList.add("fourth", "border");
+const btnDanger = document.querySelector(".btn-danger");
+
+btnDanger.addEventListener("focus", () => {
+  alertBox.classList.add("alert-danger");
+  alertBox.textContent = "A simple danger alert—check it out!";
+});
+
+btnDanger.addEventListener("focusout", () => {
+  alertBox.classList.remove("alert-danger");
+  alertBox.textContent = "";
+});
 
 //** task 5 */
-const firstButton = document.querySelector("#p1 button");
-firstButton.style.backgroundColor = "gold";
-firstButton.style.color = "blue";
+const btnDark = document.querySelector(".btn-dark");
+const btnLight = document.querySelector(".btn-light");
+
+btnLight.classList.add("hide");
+
+function toggleMode() {
+  document.body.classList.toggle("dark-mode");
+  if (document.body.classList.contains("dark-mode")) {
+    btnDark.classList.add("hide");
+    btnLight.classList.remove("hide");
+  } else {
+    btnDark.classList.remove("hide");
+    btnLight.classList.add("hide");
+  }
+}
+
+btnDark.addEventListener("click", toggleMode);
+btnLight.addEventListener("click", toggleMode);
 
 //** task 6 */
-const secondButton = document.querySelector("#p2 button");
-secondButton.addEventListener("click", () => {
-  p1.style.display = "none";
+const btnInfo = document.querySelector(".btn-info");
+
+btnInfo.addEventListener("keypress", (event) => {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    alertBox.classList.add("alert-info");
+    alertBox.textContent = "A simple info alert—check it out!";
+  }
 });
 
 //** task 7 */
-const thirdButton = document.querySelector("#p3 button");
-thirdButton.addEventListener("click", () => {
-  p1.style.display = "block";
-});
+const cards = document.querySelectorAll(".card");
+
+for (let i = 0; i < cards.length; i++) {
+  const cardTitle = cards[i].querySelector(".card-title");
+  console.log(cardTitle.textContent);
+}
 
 //** task 8 */
-const fourthButton = document.querySelector("#p4 button");
-fourthButton.addEventListener("click", () => {
-  document.body.classList.toggle("dark-theme");
-});
+for (let i = 0; i < cards.length; i++) {
+  const cardTitle = cards[i].querySelector(".card-title");
+  const addToCartBtn = cards[i].querySelector(".add-to-cart");
+
+  addToCartBtn.addEventListener("click", (event) => {
+    event.preventDefault();
+    console.log(cardTitle.textContent);
+  });
+}
