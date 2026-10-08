@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <title>Adrenaline | Login</title>
+  </head>
+  <body>
+    <main class="register-page">
+      <div class="register-card login-preview-card">
+        <h1 class="register-title">Авторизація в клубі Adrenaline</h1>
+        <p class="login-description">
+          Вітаємо у нашому спортивному клубі! Авторизуйтесь, щоб отримати доступ
+          до вашого особистого кабінету, розкладу тренувань та персональних
+          пропозицій.
+        </p>
+        <p class="login-description">
+          Якщо ви ще не маєте акаунту, зверніться до нашого адміністратора або
+          пройдіть швидку реєстрацію.
+        </p>
+        <button
+          type="button"
+          id="openLoginModalBtn"
+          class="submit-btn open-modal-btn"
+        >
+          Увійти в акаунт
+        </button>
+      </div>
+    </main>
+
+    <div class="modal-overlay" id="loginModal">
+      <div class="register-card modal-card">
+        <button type="button" class="close-btn" id="closeModalBtn">
+          &times;
+        </button>
+        <h1 class="register-title">Вхід на сайт</h1>
+        <div id="authStatus" class="auth-status"></div>
+
+        <form id="loginForm" class="register-form">
+          <div class="form-group">
+            <label for="login">Логін або Email</label>
+            <input
+              type="text"
+              id="login"
+              name="login"
+              placeholder="Введіть логін або email"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="password">Пароль</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="••••••••"
+              required
+            />
+          </div>
+
+          <div class="form-group remember-group">
+            <label class="checkbox-label">
+              <input type="checkbox" id="rememberMe" name="remember_me" />
+              Запам'ятати мене
+            </label>
+          </div>
+
+          <div class="buttons-group">
+            <button type="submit" class="submit-btn">Увійти</button>
+            <button type="button" class="cancel-btn" id="cancelBtn">
+              Відмінити
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script type="module" src="/js/login.js"></script>
+  </body>
+</html>
