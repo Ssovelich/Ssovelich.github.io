@@ -1,27 +1,58 @@
 // task 1
 
-let example1: string = "Hello World!";
-let example2: number = 42;
-let example3: boolean = true;
-let example4: symbol = Symbol();
-let example5: bigint = 123n;
+export const concatName = (first: string, last?: string) => {
+  if (!last) {
+    return first;
+  }
 
-console.log(example1, example2, example3, example4, example5);
+  return `${first} ${last}`;
+};
+
+export const result1 = concatName("John", "Doe");
+export const result2 = concatName("John");
 
 // task 2
 
-const concatTwoStrings = (a: string, b: string): string => {
+export const concatTwoStrings = (a: string, b: string) => {
   return [a, b].join(" ");
 };
 
-const greeting = concatTwoStrings("Hello", "World");
-console.log(greeting);
+export const resultTwoStrings = concatTwoStrings("Hello", "World");
 
 // task 3
 
-const add = (a: number, b: number): number => {
+export const add = (a: number, b: number) => {
   return a + b;
 };
 
-const result = add(2, 3);
-console.log(result);
+export const resultAdd = add(2, 3);
+
+// task 4
+
+type User = {
+  id: string;
+  name: string;
+};
+
+export const modifyUser = (
+  user: User[],
+  id: string,
+  makeChange: (user: User) => User,
+) => {
+  return user.map((u) => {
+    if (u.id === id) {
+      return makeChange(u);
+    }
+
+    return u;
+  });
+};
+
+export const users: User[] = [
+  { id: "1", name: "John" },
+  { id: "2", name: "Jane" },
+];
+
+export const updatedUsers = modifyUser(users, "1", (user) => {
+  return { ...user, name: "Waqas" };
+});
