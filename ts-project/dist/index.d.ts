@@ -1,16 +1,29 @@
-export declare const concatName: (first: string, last?: string) => string;
-export declare const result1: string;
-export declare const result2: string;
-export declare const concatTwoStrings: (a: string, b: string) => string;
-export declare const resultTwoStrings: string;
-export declare const add: (a: number, b: number) => number;
-export declare const resultAdd: number;
-type User = {
-    id: string;
-    name: string;
+type Position = {
+    x: number;
+    y: number;
 };
-export declare const modifyUser: (user: User[], id: string, makeChange: (user: User) => User) => User[];
-export declare const users: User[];
-export declare const updatedUsers: User[];
+export declare class CanvasNodeTask1 {
+    readonly x: number;
+    readonly y: number;
+}
+export declare class CanvasNodeTask2 {
+    x: number;
+    y: number;
+    move(x: number, y: number): void;
+}
+export declare class CanvasNodeTask3 {
+    x: number;
+    y: number;
+    constructor(position?: Position);
+    get position(): Position;
+    move(x: number, y: number): void;
+}
+export declare class CanvasNode {
+    #private;
+    constructor(position?: Position);
+    get position(): Position;
+    set position(newPosition: Position);
+    move(x: number, y: number): void;
+}
 export {};
 //# sourceMappingURL=index.d.ts.map

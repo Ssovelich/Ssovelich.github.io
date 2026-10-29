@@ -1,58 +1,76 @@
-// task 1
+type Position = {
+  x: number;
+  y: number;
+};
 
-export const concatName = (first: string, last?: string) => {
-  if (!last) {
-    return first;
+// Task 1
+
+export class CanvasNodeTask1 {
+  readonly x: number = 0;
+  readonly y: number = 0;
+}
+
+// Task 2
+
+export class CanvasNodeTask2 {
+  x: number = 0;
+  y: number = 0;
+
+  move(x: number, y: number): void {
+    this.x = x;
+    this.y = y;
+  }
+}
+
+// Task 3
+
+export class CanvasNodeTask3 {
+  x: number;
+  y: number;
+
+  constructor(position?: Position) {
+    this.x = position?.x ?? 0;
+    this.y = position?.y ?? 0;
   }
 
-  return `${first} ${last}`;
-};
+  get position(): Position {
+    return {
+      x: this.x,
+      y: this.y,
+    };
+  }
 
-export const result1 = concatName("John", "Doe");
-export const result2 = concatName("John");
+  move(x: number, y: number): void {
+    this.x = x;
+    this.y = y;
+  }
+}
 
-// task 2
+// Task 4
 
-export const concatTwoStrings = (a: string, b: string) => {
-  return [a, b].join(" ");
-};
+export class CanvasNode {
+  #x: number;
+  #y: number;
 
-export const resultTwoStrings = concatTwoStrings("Hello", "World");
+  constructor(position?: Position) {
+    this.#x = position?.x ?? 0;
+    this.#y = position?.y ?? 0;
+  }
 
-// task 3
+  get position(): Position {
+    return {
+      x: this.#x,
+      y: this.#y,
+    };
+  }
 
-export const add = (a: number, b: number) => {
-  return a + b;
-};
+  set position(newPosition: Position) {
+    this.#x = newPosition.x;
+    this.#y = newPosition.y;
+  }
 
-export const resultAdd = add(2, 3);
-
-// task 4
-
-type User = {
-  id: string;
-  name: string;
-};
-
-export const modifyUser = (
-  user: User[],
-  id: string,
-  makeChange: (user: User) => User,
-) => {
-  return user.map((u) => {
-    if (u.id === id) {
-      return makeChange(u);
-    }
-
-    return u;
-  });
-};
-
-export const users: User[] = [
-  { id: "1", name: "John" },
-  { id: "2", name: "Jane" },
-];
-
-export const updatedUsers = modifyUser(users, "1", (user) => {
-  return { ...user, name: "Waqas" };
-});
+  move(x: number, y: number): void {
+    this.#x = x;
+    this.#y = y;
+  }
+}

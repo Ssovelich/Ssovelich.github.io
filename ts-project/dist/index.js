@@ -1,42 +1,64 @@
 "use strict";
-// task 1
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.updatedUsers = exports.users = exports.modifyUser = exports.resultAdd = exports.add = exports.resultTwoStrings = exports.concatTwoStrings = exports.result2 = exports.result1 = exports.concatName = void 0;
-const concatName = (first, last) => {
-    if (!last) {
-        return first;
+exports.CanvasNode = exports.CanvasNodeTask3 = exports.CanvasNodeTask2 = exports.CanvasNodeTask1 = void 0;
+// Task 1
+class CanvasNodeTask1 {
+    x = 0;
+    y = 0;
+}
+exports.CanvasNodeTask1 = CanvasNodeTask1;
+// Task 2
+class CanvasNodeTask2 {
+    x = 0;
+    y = 0;
+    move(x, y) {
+        this.x = x;
+        this.y = y;
     }
-    return `${first} ${last}`;
-};
-exports.concatName = concatName;
-exports.result1 = (0, exports.concatName)("John", "Doe");
-exports.result2 = (0, exports.concatName)("John");
-// task 2
-const concatTwoStrings = (a, b) => {
-    return [a, b].join(" ");
-};
-exports.concatTwoStrings = concatTwoStrings;
-exports.resultTwoStrings = (0, exports.concatTwoStrings)("Hello", "World");
-// task 3
-const add = (a, b) => {
-    return a + b;
-};
-exports.add = add;
-exports.resultAdd = (0, exports.add)(2, 3);
-const modifyUser = (user, id, makeChange) => {
-    return user.map((u) => {
-        if (u.id === id) {
-            return makeChange(u);
-        }
-        return u;
-    });
-};
-exports.modifyUser = modifyUser;
-exports.users = [
-    { id: "1", name: "John" },
-    { id: "2", name: "Jane" },
-];
-exports.updatedUsers = (0, exports.modifyUser)(exports.users, "1", (user) => {
-    return { ...user, name: "Waqas" };
-});
+}
+exports.CanvasNodeTask2 = CanvasNodeTask2;
+// Task 3
+class CanvasNodeTask3 {
+    x;
+    y;
+    constructor(position) {
+        this.x = position?.x ?? 0;
+        this.y = position?.y ?? 0;
+    }
+    get position() {
+        return {
+            x: this.x,
+            y: this.y,
+        };
+    }
+    move(x, y) {
+        this.x = x;
+        this.y = y;
+    }
+}
+exports.CanvasNodeTask3 = CanvasNodeTask3;
+// Task 4
+class CanvasNode {
+    #x;
+    #y;
+    constructor(position) {
+        this.#x = position?.x ?? 0;
+        this.#y = position?.y ?? 0;
+    }
+    get position() {
+        return {
+            x: this.#x,
+            y: this.#y,
+        };
+    }
+    set position(newPosition) {
+        this.#x = newPosition.x;
+        this.#y = newPosition.y;
+    }
+    move(x, y) {
+        this.#x = x;
+        this.#y = y;
+    }
+}
+exports.CanvasNode = CanvasNode;
 //# sourceMappingURL=index.js.map
